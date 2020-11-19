@@ -1,4 +1,7 @@
+tempf=70
 while True:
-    "Current Room Temperature:95°F-35°C"
-    print("Temperature (F) : " + input.temperature(TemperatureUnit.FAHRENHEIT) + " -  Temperature (C): " + input.temperature(TemperatureUnit.CELSIUS))
-    
+    print("temperature"+input.temperature(TemperatureUnit.FAHRENHEIT))
+    if input.temperature(TemperatureUnit.FAHRENHEIT) > tempf:
+        light.set_pixel_color(5,light.rgb(255,0,0))
+    else :
+        light.clear()
